@@ -49,37 +49,37 @@
     <style>
       .bg-grid { stroke: #111b2d; stroke-width: 0.5; opacity: 0.4; }
       .orbit-line { fill: none; stroke-dasharray: 4 8; opacity: 0.25; }
-
+      
       /* Rotation Animation Primitives */
       @keyframes spin-clockwise {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
       }
       @keyframes spin-counter {
-      from { transform: rotate(360deg); }
-      to { transform: rotate(0deg); }
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
       }
       @keyframes pulse-slow {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.04); opacity: 0.6; }
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.04); opacity: 0.6; }
       }
 
       /* Dynamic Assignment classes */
       .rot-slow-cw { transform-origin: 600px 337px; animation: spin-clockwise 70s linear infinite; }
       .rot-mid-cw { transform-origin: 600px 337px; animation: spin-clockwise 45s linear infinite; }
       .rot-fast-cw { transform-origin: 600px 337px; animation: spin-clockwise 25s linear infinite; }
-
+      
       .rot-slow-ccw { transform-origin: 600px 337px; animation: spin-counter 80s linear infinite; }
       .rot-mid-ccw { transform-origin: 600px 337px; animation: spin-counter 50s linear infinite; }
-
+      
       .accretion-core { transform-origin: 600px 337px; animation: pulse-slow 6s ease-in-out infinite; }
-
+      
 
       .math-text { font-size: 19px; fill: #ffffff; font-weight: 500; text-shadow: 0 0 6px rgba(255,255,255,0.6); }
       .math-blue { fill: #bdeabf; text-shadow: 0 0 8px rgba(0,243,255,0.8); }
       .math-orange { fill: #ffd3b6; text-shadow: 0 0 8px rgba(255,119,0,0.8); }
       .domain-label { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; fill: #8fa7c7; letter-spacing: 2px; font-weight: 600; }
-
+      
       /* Node Graph Styling */
       .node { fill: #00f3ff; filter: url(#glow-subtle); }
       .node-orange { fill: #ff7700; filter: url(#glow-subtle); }
@@ -90,7 +90,7 @@
 
   <!-- ================= BACKGROUND SPACE & SPACE-TIME GRID ================= -->
   <rect width="100%" height="100%" fill="#030508" />
-
+  
   <!-- Warp/Gravity Grid Simulation -->
   <g class="bg-grid">
     <!-- Concentric Ellipses warping inward -->
@@ -126,19 +126,19 @@
   <ellipse cx="600" cy="337" rx="82" ry="80" fill="#000000" />
 
   <!-- ================= ORBITAL DYNAMICS & MATHEMATICAL RINGS ================= -->
-
+  
   <!-- INNER RING (Fast Velocity, Blue/Cyan Dominant Shift) -->
   <g class="rot-fast-cw">
     <ellipse cx="600" cy="337" rx="220" ry="110" class="orbit-line" stroke="url(#ring-blue)" />
     <ellipse cx="600" cy="337" rx="260" ry="130" class="orbit-line" stroke="url(#ring-blue)" />
-
+    
     <!-- Moving Equations Inner Ring -->
     <text x="600" y="200" class="math-text math-blue" text-anchor="middle">∇²ϕ = 4πGρ</text>
     <text x="780" y="280" class="math-text math-blue" text-anchor="start">σ(x) = 1 / (1 + e⁻ˣ)</text>
     <text x="600" y="490" class="math-text math-blue" text-anchor="middle">H|ψ⟩ = E|ψ⟩</text>
     <text x="400" y="420" class="math-text math-blue" text-anchor="end">L(θ) = -∑ log P(y|x, θ)</text>
     <text x="350" y="260" class="math-text math-blue" text-anchor="end">AᵀA = VΣ²Vᵀ</text>
-
+    
     <!-- Orbital Nodes/Data Packets -->
     <circle cx="600" cy="227" r="4" fill="#00f3ff" filter="url(#glow-subtle)" />
     <circle cx="860" cy="337" r="5" fill="#00f3ff" filter="url(#glow-subtle)" />
@@ -149,7 +149,7 @@
   <g class="rot-mid-ccw">
     <ellipse cx="600" cy="337" rx="350" ry="175" class="orbit-line" stroke="url(#ring-blue)" />
     <ellipse cx="600" cy="337" rx="410" ry="205" class="orbit-line" stroke="url(#ring-orange)" />
-
+    
     <!-- Moving Equations Middle Ring -->
     <text x="600" y="140" class="math-text" text-anchor="middle">P(y|x) = [P(x|y)P(y)] / P(x)</text>
     <text x="890" y="220" class="math-text math-orange" text-anchor="start">eⁱⁿ + 1 = 0</text>
@@ -168,7 +168,7 @@
   <g class="rot-slow-cw">
     <ellipse cx="600" cy="337" rx="500" ry="250" class="orbit-line" stroke="url(#ring-orange)" />
     <ellipse cx="600" cy="337" rx="560" ry="280" class="orbit-line" stroke="url(#ring-orange)" />
-
+    
     <!-- Moving Equations Outer Ring -->
     <text x="840" y="160" class="math-text math-orange" text-anchor="start">∂/∂θ J(θ) = 0</text>
     <text x="960" y="270" class="math-text math-orange" text-anchor="start">∫₋∞ᵐ e⁻ˣ²dx = √π</text>
@@ -176,7 +176,7 @@
     <text x="780" y="560" class="math-text math-orange" text-anchor="start">d/dx eˣ = eˣ</text>
     <text x="600" y="605" class="math-text math-orange" text-anchor="middle">∫ₐᵇ f(x)dx</text>
     <text x="420" y="550" class="math-text math-blue" text-anchor="end">∑ᵢ⁼₁ⁿ xᵢ²</text>
-
+    
     <!-- Outer Nodes -->
     <circle cx="600" cy="87" r="6" fill="#ff5500" filter="url(#glow-subtle)" />
     <circle cx="1100" cy="337" r="4" fill="#ffdd00" />
@@ -243,7 +243,7 @@
 
 
   <!-- ================= CONSTELLATION NODE NETWORKS (Four Corners) ================= -->
-
+  
   <!-- TOP LEFT GRAPH (Neural Nets Blue Primitives) -->
   <g class="edges">
     <line x1="40" y1="50" x2="100" y2="80" class="edge" />
