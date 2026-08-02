@@ -1,89 +1,9 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,4,5,6&height=200&section=header&text=Hey%20there,%20I'm%20Roshan%20Yadav&fontSize=40&fontAlignY=35&animation=fadeIn&fontColor=white" width="100%"/>
-</div>
+# 💫 About Me:
+I'm Roshan (Kyros), an AI enthusiast and developer passionate about building intelligent systems that solve real-world problems.<br><br>🧠 Currently mastering Machine Learning, Deep Learning, and Generative AI<br>🤖 Building AI-powered applications with a focus on Agentic AI, LLMs, and Multi-Modal AI<br>🔬 Interested in AI Research, Computer Vision, NLP, and Game Theory<br>💻 Love creating full-stack AI products using Python, FastAPI, React, and modern AI frameworks<br>🚀 Always exploring new technologies and turning ambitious ideas into reality<br>🌌 Beyond coding, I'm fascinated by Physics, Space Exploration, and the future of Artificial Intelligence
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=7B68EE&center=true&vCenter=true&width=435&lines=AI+Engineer+%7C+ML+Engineer;AI+Research+Enthusiast;Building+Intelligent+Systems;Kyros+in+the+Digital+Realm" alt="Typing SVG" />
-</div>
 
-<div align="center">
-  <i>also known as <b>Kyros</b> in the digital realm</i> ⚡
-</div>
+# 💻 Tech Stack:
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white) ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 
----
 
-<table align="center">
-  <tr>
-    <td>
-      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjB5eTl3Z3d6Z2x2eW5jM3BwemY4eGZ3eTl6eHh6eGZ6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LaVp0AyqR5bGsC5Cbm/giphy.gif" width="350" alt="AI Animation"/>
-    </td>
-    <td>
-      <h2>🧠 About Me</h2>
-      <p>📍 Based in <b>Bengaluru, India</b> 🇮🇳</p>
-      <p>🤖 <b>AI Engineer</b> & <b>ML Engineer</b></p>
-      <p>🔬 <b>AI Research Enthusiast</b></p>
-      <p>🧮 Passionate about <b>Mathematics × AI</b></p>
-      <p>🚀 Building the future, one model at a time</p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 🧬 Core Domains
-
-<div align="center">
-
-| 🧠 Deep Learning | 👁️ Computer Vision | 💬 LLMs |
-|:---:|:---:|:---:|
-| <img src="https://img.icons8.com/color/96/deep-learning.png" width="60"/> | <img src="https://img.icons8.com/color/96/computer-vision.png" width="60"/> | <img src="https://img.icons8.com/color/96/language.png" width="60"/> |
-
-| 🌐 Multimodal AI | 🤖 Agentic AI | 📊 Bayesian |
-|:---:|:---:|:---:|
-| <img src="https://img.icons8.com/color/96/multi-edit.png" width="60"/> | <img src="https://img.icons8.com/color/96/bot.png" width="60"/> | <img src="https://img.icons8.com/color/96/combo-chart.png" width="60"/> |
-
-</div>
-
----
-
-## ⚙️ Tech Arsenal
-
-<div align="center">
-
-### 🐍 Languages
-
-<img src="https://img.icons8.com/color/48/python.png" width="50" title="Python"/>
-<img src="https://img.icons8.com/color/48/c-plus-plus-logo.png" width="50" title="C++"/>
-<img src="https://img.icons8.com/color/48/javascript.png" width="50" title="JavaScript"/>
-
-### 🧠 AI & ML
-
-<img src="[https://img.icons8.com/color/48/pytorch.png](https://img.icons8.com/?size=100&id=O6SWwpPIM0GB&format=png&color=000000)" width="50" title="PyTorch"/>
-<img src="https://img.icons8.com/color/48/tensorflow.png" width="50" title="TensorFlow"/>
-<img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="50" title="Hugging Face"/>
-<img src="https://img.icons8.com/color/48/opencv.png" width="50" title="OpenCV"/>
-<img src="https://img.icons8.com/color/48/numpy.png" width="50" title="NumPy"/>
-<img src="https://img.icons8.com/color/48/pandas.png" width="50" title="Pandas"/>
-
-### ⚡ Backend & DevOps
-
-<img src="https://img.icons8.com/color/48/fastapi.png" width="50" title="FastAPI"/>
-<img src="https://img.icons8.com/color/48/docker.png" width="50" title="Docker"/>
-<img src="https://img.icons8.com/color/48/git.png" width="50" title="Git"/>
-<img src="https://img.icons8.com/color/48/linux.png" width="50" title="Linux (Fedora)"/>
-
-### 🎨 Frontend & 3D
-
-<img src="https://img.icons8.com/color/48/react-native.png" width="50" title="React"/>
-<img src="https://img.icons8.com/color/48/threejs.png" width="50" title="Three.js"/>
-
-</div>
-
----
-
-<div align="center">
-  
-  *"The best way to predict the future is to create it."*
-  
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,4,5,6&height=100&section=footer" width="100%"/>
-</div>
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
