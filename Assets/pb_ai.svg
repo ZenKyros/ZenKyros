@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%" style="background: #030508; font-family: 'Times New Roman', Times, serif;">
+  <defs>
+    <!-- Core Glow & Blur Filters -->
+    <filter id="glow-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur1" />
+      <feGaussianBlur stdDeviation="25" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-subtle" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Cosmic Color Gradients -->
+    <radialGradient id="singularity-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="85%" stop-color="#000000" />
+      <stop offset="93%" stop-color="#05020a" />
+      <stop offset="100%" stop-color="#4a2574" stop-opacity="0.4" />
+    </radialGradient>
+
+    <radialGradient id="accretion-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa44" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#ff6600" stop-opacity="0.7" />
+      <stop offset="65%" stop-color="#0099ff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#030508" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Linear Gradients for Rings -->
+    <linearGradient id="ring-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0044ff" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="ring-orange" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff7700" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffdd00" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Styles for Animations -->
+    <style>
+      .bg-grid { stroke: #111b2d; stroke-width: 0.5; opacity: 0.4; }
+      .orbit-line { fill: none; stroke-dasharray: 4 8; opacity: 0.25; }
+      
+      /* Rotation Animation Primitives */
+      @keyframes spin-clockwise {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes spin-counter {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes pulse-slow {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.04); opacity: 0.6; }
+      }
+
+      /* Dynamic Assignment classes */
+      .rot-slow-cw { transform-origin: 600px 337px; animation: spin-clockwise 70s linear infinite; }
+      .rot-mid-cw { transform-origin: 600px 337px; animation: spin-clockwise 45s linear infinite; }
+      .rot-fast-cw { transform-origin: 600px 337px; animation: spin-clockwise 25s linear infinite; }
+      
+      .rot-slow-ccw { transform-origin: 600px 337px; animation: spin-counter 80s linear infinite; }
+      .rot-mid-ccw { transform-origin: 600px 337px; animation: spin-counter 50s linear infinite; }
+      
+      .accretion-core { transform-origin: 600px 337px; animation: pulse-slow 6s ease-in-out infinite; }
+      
+      /* Equation & Label Styling */
+      .math-text { font-size: 19px; fill: #ffffff; font-weight: 500; text-shadow: 0 0 6px rgba(255,255,255,0.6); }
+      .math-blue { fill: #bdeabf; text-shadow: 0 0 8px rgba(0,243,255,0.8); }
+      .math-orange { fill: #ffd3b6; text-shadow: 0 0 8px rgba(255,119,0,0.8); }
+      .domain-label { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; fill: #8fa7c7; letter-spacing: 2px; font-weight: 600; }
+      
+      /* Node Graph Styling */
+      .node { fill: #00f3ff; filter: url(#glow-subtle); }
+      .node-orange { fill: #ff7700; filter: url(#glow-subtle); }
+      .edge { stroke: #1a3c61; stroke-width: 0.7; opacity: 0.6; }
+      .edge-orange { stroke: #61341a; stroke-width: 0.7; opacity: 0.6; }
+    </style>
+  </defs>
+
+  <!-- ================= BACKGROUND SPACE & SPACE-TIME GRID ================= -->
+  <rect width="100%" height="100%" fill="#030508" />
+  
+  <!-- Warp/Gravity Grid Simulation -->
+  <g class="bg-grid">
+    <!-- Concentric Ellipses warping inward -->
+    <ellipse cx="600" cy="337" rx="900" ry="500" />
+    <ellipse cx="600" cy="337" rx="800" ry="430" />
+    <ellipse cx="600" cy="337" rx="700" ry="370" />
+    <ellipse cx="600" cy="337" rx="580" ry="300" />
+    <ellipse cx="600" cy="337" rx="460" ry="230" />
+    <ellipse cx="600" cy="337" rx="340" ry="160" />
+    <ellipse cx="600" cy="337" rx="240" ry="100" />
+    <!-- Grid Rays -->
+    <path d="M -300 337 L 1500 337 M 600 -163 L 600 837 M -150 -113 L 1350 787 M 1350 -113 L -150 787" />
+  </g>
+
+  <!-- Starfields (Static background dust) -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="120" cy="80" r="1" /><circle cx="340" cy="50" r="1.5" /><circle cx="950" cy="120" r="1" />
+    <circle cx="1100" cy="200" r="0.8" /><circle cx="150" cy="600" r="1.2" /><circle cx="850" cy="620" r="1.5" />
+    <circle cx="720" cy="40" r="1" /><circle cx="1050" cy="580" r="1.2" /><circle cx="50" cy="400" r="1" />
+  </g>
+
+  <!-- ================= THE ACCRETION DISK CORE ================= -->
+  <!-- Underlying intense light dynamics -->
+  <g class="accretion-core" transform="rotate(-12 600 337)">
+    <ellipse cx="600" cy="337" rx="280" ry="110" fill="url(#accretion-glow)" filter="url(#glow-heavy)" />
+    <ellipse cx="600" cy="337" rx="210" ry="75" fill="#ffaa00" opacity="0.4" filter="url(#glow-heavy)" />
+    <ellipse cx="600" cy="337" rx="160" ry="50" fill="#ffffff" opacity="0.7" filter="url(#glow-heavy)" />
+  </g>
+
+  <!-- ================= SCHWARZSCHILD SINGULARITY (THE BLACK HOLE) ================= -->
+  <!-- Event Horizon overlaying the center perfectly -->
+  <ellipse cx="600" cy="337" rx="90" ry="88" fill="url(#singularity-grad)" />
+  <ellipse cx="600" cy="337" rx="82" ry="80" fill="#000000" />
+
+  <!-- ================= ORBITAL DYNAMICS & MATHEMATICAL RINGS ================= -->
+  
+  <!-- INNER RING (Fast Velocity, Blue/Cyan Dominant Shift) -->
+  <g class="rot-fast-cw">
+    <ellipse cx="600" cy="337" rx="220" ry="110" class="orbit-line" stroke="url(#ring-blue)" />
+    <ellipse cx="600" cy="337" rx="260" ry="130" class="orbit-line" stroke="url(#ring-blue)" />
+    
+    <!-- Moving Equations Inner Ring -->
+    <text x="600" y="200" class="math-text math-blue" text-anchor="middle">∇²ϕ = 4πGρ</text>
+    <text x="780" y="280" class="math-text math-blue" text-anchor="start">σ(x) = 1 / (1 + e⁻ˣ)</text>
+    <text x="600" y="490" class="math-text math-blue" text-anchor="middle">H|ψ⟩ = E|ψ⟩</text>
+    <text x="400" y="420" class="math-text math-blue" text-anchor="end">L(θ) = -∑ log P(y|x, θ)</text>
+    <text x="350" y="260" class="math-text math-blue" text-anchor="end">AᵀA = VΣ²Vᵀ</text>
+    
+    <!-- Orbital Nodes/Data Packets -->
+    <circle cx="600" cy="227" r="4" fill="#00f3ff" filter="url(#glow-subtle)" />
+    <circle cx="860" cy="337" r="5" fill="#00f3ff" filter="url(#glow-subtle)" />
+    <circle cx="340" cy="337" r="3" fill="#00ffff" />
+  </g>
+
+  <!-- MIDDLE RING (Moderate Velocity, Transitional Mix) -->
+  <g class="rot-mid-ccw">
+    <ellipse cx="600" cy="337" rx="350" ry="175" class="orbit-line" stroke="url(#ring-blue)" />
+    <ellipse cx="600" cy="337" rx="410" ry="205" class="orbit-line" stroke="url(#ring-orange)" />
+    
+    <!-- Moving Equations Middle Ring -->
+    <text x="600" y="140" class="math-text" text-anchor="middle">P(y|x) = [P(x|y)P(y)] / P(x)</text>
+    <text x="890" y="220" class="math-text math-orange" text-anchor="start">eⁱⁿ + 1 = 0</text>
+    <text x="940" y="380" class="math-text math-orange" text-anchor="start">λ₁x₁ + λ₂x₂ + ... + λₙxₙ</text>
+    <text x="600" y="550" class="math-text math-orange" text-anchor="middle">θ = arctan(y/x)</text>
+    <text x="240" y="350" class="math-text math-blue" text-anchor="end">softmax(zᵢ) = eᶻⁱ / ∑ eᶻʲ</text>
+    <text x="290" y="230" class="math-text math-blue" text-anchor="end">f(x) = Wx + b</text>
+
+    <!-- Mid Ring Nodes -->
+    <circle cx="600" cy="162" r="4" fill="#ff7700" filter="url(#glow-subtle)" />
+    <circle cx="950" cy="337" r="5" fill="#ffaa00" filter="url(#glow-subtle)" />
+    <circle cx="250" cy="337" r="4.5" fill="#00aaff" filter="url(#glow-subtle)" />
+  </g>
+
+  <!-- OUTER RING (Slow Velocity, Relativistic / Orange Shifted Elements) -->
+  <g class="rot-slow-cw">
+    <ellipse cx="600" cy="337" rx="500" ry="250" class="orbit-line" stroke="url(#ring-orange)" />
+    <ellipse cx="600" cy="337" rx="560" ry="280" class="orbit-line" stroke="url(#ring-orange)" />
+    
+    <!-- Moving Equations Outer Ring -->
+    <text x="840" y="160" class="math-text math-orange" text-anchor="start">∂/∂θ J(θ) = 0</text>
+    <text x="960" y="270" class="math-text math-orange" text-anchor="start">∫₋∞ᵐ e⁻ˣ²dx = √π</text>
+    <text x="920" y="470" class="math-text math-orange" text-anchor="start">lim [x→0] (sin x)/x = 1</text>
+    <text x="780" y="560" class="math-text math-orange" text-anchor="start">d/dx eˣ = eˣ</text>
+    <text x="600" y="605" class="math-text math-orange" text-anchor="middle">∫ₐᵇ f(x)dx</text>
+    <text x="420" y="550" class="math-text math-blue" text-anchor="end">∑ᵢ⁼₁ⁿ xᵢ²</text>
+    
+    <!-- Outer Nodes -->
+    <circle cx="600" cy="87" r="6" fill="#ff5500" filter="url(#glow-subtle)" />
+    <circle cx="1100" cy="337" r="4" fill="#ffdd00" />
+    <circle cx="100" cy="337" r="5" fill="#00f3ff" filter="url(#glow-subtle)" />
+  </g>
+
+  <!-- ================= SYSTEM DOMAIN TOPICS (Static Boundary Floating) ================= -->
+  <!-- Deep Learning (Top Center) -->
+  <g transform="translate(600, 45)" text-anchor="middle">
+    <text class="domain-label">DEEP LEARNING</text>
+    <circle cx="0" cy="15" r="4" fill="#00f3ff" filter="url(#glow-subtle)" />
+  </g>
+
+  <!-- Machine Learning (Top Left) -->
+  <g transform="translate(280, 95)" text-anchor="middle">
+    <text class="domain-label">MACHINE LEARNING</text>
+    <circle cx="0" cy="15" r="4" fill="#3b9eff" />
+  </g>
+
+  <!-- Computer Vision (Top Right) -->
+  <g transform="translate(900, 50)" text-anchor="middle">
+    <text class="domain-label">COMPUTER VISION</text>
+    <circle cx="0" cy="15" r="4" fill="#678fff" />
+  </g>
+
+  <!-- NLP (Far Right Top) -->
+  <g transform="translate(1100, 155)" text-anchor="middle">
+    <text class="domain-label">NLP</text>
+    <circle cx="0" cy="15" r="3" fill="#a277ff" />
+  </g>
+
+  <!-- Transformers (Right Upper Flank) -->
+  <g transform="translate(1220, 290)" text-anchor="end">
+    <text class="domain-label">TRANSFORMERS</text>
+  </g>
+
+  <!-- LLMs (Right Middle Flank) -->
+  <g transform="translate(1240, 510)" text-anchor="end">
+    <text class="domain-label">LLMs</text>
+  </g>
+
+  <!-- Multimodal AI (Bottom Right) -->
+  <g transform="translate(920, 620)" text-anchor="middle">
+    <text class="domain-label">MULTIMODAL AI</text>
+    <circle cx="0" cy="15" r="4" fill="#ff7700" filter="url(#glow-subtle)" />
+  </g>
+
+  <!-- Bayesian Learning (Bottom Center-Left) -->
+  <g transform="translate(420, 625)" text-anchor="middle">
+    <text class="domain-label">BAYESIAN LEARNING</text>
+    <circle cx="0" cy="15" r="4" fill="#ffaa00" />
+  </g>
+
+  <!-- Agentic AI (Bottom Left) -->
+  <g transform="translate(250, 560)" text-anchor="middle">
+    <text class="domain-label">AGENTIC AI</text>
+    <circle cx="0" cy="15" r="4" fill="#00bfff" />
+  </g>
+
+  <!-- Reinforcement Learning (Far Left Bottom) -->
+  <g transform="translate(90, 430)" text-anchor="middle">
+    <text class="domain-label">REINFORCEMENT LEARNING</text>
+  </g>
+
+
+  <!-- ================= CONSTELLATION NODE NETWORKS (Four Corners) ================= -->
+  
+  <!-- TOP LEFT GRAPH (Neural Nets Blue Primitives) -->
+  <g class="edges">
+    <line x1="40" y1="50" x2="100" y2="80" class="edge" />
+    <line x1="100" y1="80" x2="160" y2="40" class="edge" />
+    <line x1="40" y1="50" x2="60" y2="130" class="edge" />
+    <line x1="60" y1="130" x2="140" y2="120" class="edge" />
+    <line x1="100" y1="80" x2="140" y2="120" class="edge" />
+    <line x1="160" y1="40" x2="220" y2="90" class="edge" />
+    <line x1="140" y1="120" x2="220" y2="90" class="edge" />
+    <line x1="60" y1="130" x2="100" y2="190" class="edge" />
+    <line x1="140" y1="120" x2="100" y2="190" class="edge" />
+  </g>
+  <g>
+    <circle cx="40" cy="50" r="4" class="node" />
+    <circle cx="100" cy="80" r="5" class="node" />
+    <circle cx="160" cy="40" r="4" class="node" />
+    <circle cx="60" cy="130" r="4.5" class="node" />
+    <circle cx="140" cy="120" r="6" class="node" />
+    <circle cx="220" cy="90" r="5.5" class="node" />
+    <circle cx="100" cy="190" r="5" class="node" />
+  </g>
+
+  <!-- TOP RIGHT GRAPH (Information Clusters Orange Primitives) -->
+  <g class="edges">
+    <line x1="1120" y1="60" x2="1180" y2="100" class="edge-orange" />
+    <line x1="1180" y1="100" x2="1240" y2="70" class="edge-orange" />
+    <line x1="1120" y1="60" x2="1140" y2="150" class="edge-orange" />
+    <line x1="1140" y1="150" x2="1210" y2="130" class="edge-orange" />
+    <line x1="1180" y1="100" x2="1210" y2="130" class="edge-orange" />
+    <line x1="1210" y1="130" x2="1270" y2="170" class="edge-orange" />
+  </g>
+  <g>
+    <circle cx="1120" cy="60" r="4" class="node-orange" />
+    <circle cx="1180" cy="100" r="5.5" class="node-orange" />
+    <circle cx="1240" cy="70" r="4" class="node-orange" />
+    <circle cx="1140" cy="150" r="4.5" class="node-orange" />
+    <circle cx="1210" cy="130" r="5" class="node-orange" />
+    <circle cx="1270" cy="170" r="4" class="node-orange" />
+  </g>
+
+  <!-- BOTTOM LEFT GRAPH (Agentic Nodes Cyan Primitives) -->
+  <g class="edges">
+    <line x1="30" y1="520" x2="90" y2="550" class="edge" />
+    <line x1="90" y1="550" x2="150" y2="510" class="edge" />
+    <line x1="30" y1="520" x2="50" y2="600" class="edge" />
+    <line x1="50" y1="600" x2="130" y2="580" class="edge" />
+    <line x1="90" y1="550" x2="130" y2="580" class="edge" />
+    <line x1="130" y1="580" x2="180" y2="630" class="edge" />
+  </g>
+  <g>
+    <circle cx="30" cy="520" r="4.5" class="node" />
+    <circle cx="90" cy="550" r="5" class="node" />
+    <circle cx="150" cy="510" r="3.5" class="node" />
+    <circle cx="50" cy="600" r="5.5" class="node" />
+    <circle cx="130" cy="580" r="4" class="node" />
+    <circle cx="180" cy="630" r="6" class="node" />
+  </g>
+
+  <!-- BOTTOM RIGHT GRAPH (Attention Topology Orange Primitives) -->
+  <g class="edges">
+    <line x1="1100" y1="510" x2="1170" y2="480" class="edge-orange" />
+    <line x1="1170" y1="480" x2="1230" y2="530" class="edge-orange" />
+    <line x1="1100" y1="510" x2="1120" y2="590" class="edge-orange" />
+    <line x1="1120" y1="590" x2="1200" y2="570" class="edge-orange" />
+    <line x1="1170" y1="480" x2="1200" y2="570" class="edge-orange" />
+    <line x1="1230" y1="530" x2="1280" y2="490" class="edge-orange" />
+    <line x1="1200" y1="570" x2="1260" y2="620" class="edge-orange" />
+    <line x1="1230" y1="530" x2="1260" y2="620" class="edge-orange" />
+  </g>
+  <g>
+    <circle cx="1100" cy="510" r="4" class="node-orange" />
+    <circle cx="1170" cy="480" r="5.5" class="node-orange" />
+    <circle cx="1230" cy="530" r="4.5" class="node-orange" />
+    <circle cx="1120" cy="590" r="5" class="node-orange" />
+    <circle cx="1200" cy="570" r="6" class="node-orange" />
+    <circle cx="1280" cy="490" r="4" class="node-orange" />
+    <circle cx="1260" cy="620" r="5" class="node-orange" />
+  </g>
+
+</svg>
