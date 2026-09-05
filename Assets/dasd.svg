@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000"
+     height="430"
+     viewBox="0 0 1000 430">
+
+  <defs>
+
+    <!-- Clean Cyan Gradients -->
+    <linearGradient id="cyan1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#00b8d4"/>
+    </linearGradient>
+
+    <linearGradient id="cyan2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00b8d4"/>
+      <stop offset="100%" stop-color="#0097a7"/>
+    </linearGradient>
+
+    <linearGradient id="cyan3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#80deea"/>
+      <stop offset="100%" stop-color="#4dd0e1"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines"
+             width="4"
+             height="8"
+             patternUnits="userSpaceOnUse">
+      <rect width="4"
+            height="1"
+            fill="#00b8d4"
+            opacity="0.02"/>
+    </pattern>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid"
+             width="40"
+             height="40"
+             patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40"
+            fill="none"
+            stroke="#00b8d4"
+            stroke-width="0.3"
+            opacity="0.04"/>
+    </pattern>
+
+    <!-- Circuit Dots -->
+    <pattern id="circuit"
+             width="80"
+             height="80"
+             patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#00d4ff" opacity="0.03"/>
+      <circle cx="60" cy="60" r="1.5" fill="#00d4ff" opacity="0.03"/>
+      <circle cx="20" cy="60" r="1.5" fill="#00b8d4" opacity="0.03"/>
+      <circle cx="60" cy="20" r="1.5" fill="#00b8d4" opacity="0.03"/>
+    </pattern>
+
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="1000" height="430" rx="16" fill="#060d10"/>
+  <rect width="1000" height="430" rx="16" fill="url(#grid)"/>
+  <rect width="1000" height="430" rx="16" fill="url(#circuit)"/>
+  <rect width="1000" height="430" rx="16" fill="url(#scanlines)"/>
+
+  <!-- ==================== BORDER ==================== -->
+  <rect x="12" y="12" width="976" height="406" rx="12" 
+        fill="none" stroke="#00b8d4" stroke-width="1" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Inner border glow -->
+  <rect x="14" y="14" width="972" height="402" rx="10" 
+        fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- ==================== TERMINAL HEADER ==================== -->
+  <rect x="12" y="12" width="976" height="38" rx="12" fill="#080f12"/>
+  <rect x="12" y="38" width="976" height="12" fill="#080f12"/>
+  <line x1="12" y1="50" x2="988" y2="50" stroke="#0d1f26" stroke-width="1"/>
+
+  <!-- Window dots -->
+  <circle cx="35" cy="31" r="5" fill="#4dd0e1" opacity="0.7"/>
+  <circle cx="53" cy="31" r="5" fill="#4dd0e1" opacity="0.4"/>
+  <circle cx="71" cy="31" r="5" fill="#4dd0e1" opacity="0.2"/>
+
+  <text x="500" y="35" text-anchor="middle" font-family="monospace" font-size="11" fill="#1a3a42">
+    ROSHAN@AI-LAB
+  </text>
+
+  <!-- Terminal status -->
+  <circle cx="960" cy="31" r="4" fill="#00d4ff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="900" y="35" font-family="monospace" font-size="9" fill="#1a3a42">● ONLINE</text>
+
+  <!-- ==================== TERMINAL PROMPT ==================== -->
+  <text x="35" y="76" font-family="monospace" font-size="12" fill="#00b8d4" font-weight="bold">
+    roshan@ai-lab:~$
+  </text>
+
+  <text x="175" y="76" font-family="monospace" font-size="12" fill="#4dd0e1">
+    fastfetch
+  </text>
+
+  <!-- Cursor -->
+  <rect x="255" y="66" width="8" height="14" fill="#00d4ff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="0.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ================================================= -->
+  <!-- LEFT ASCII - Clean Cyan -->
+  <!-- ================================================= -->
+  <g transform="translate(42 115)"
+     font-family="monospace"
+     font-size="18"
+     font-weight="bold"
+     filter="url(#glow)">
+
+    <text x="0" y="0" fill="url(#cyan1)">██╗  ██╗██╗   ██╗██████╗  ██████╗ ███████╗</text>
+    <text x="0" y="25" fill="url(#cyan2)">╚██╗██╔╝╚██╗ ██╔╝██╔══██╗██╔═══██╗██╔════╝</text>
+    <text x="0" y="50" fill="url(#cyan1)"> ╚███╔╝  ╚════╝ ██████╔╝██║   ██║███████╗</text>
+    <text x="0" y="75" fill="url(#cyan2)"> ██╔██╗  ██╔═══╝ ██╔══██╗██║   ██║╚════██║</text>
+    <text x="0" y="100" fill="url(#cyan1)">██╔╝ ██╗ ██║    ██║  ██║╚██████╔╝███████║</text>
+    <text x="0" y="125" fill="url(#cyan3)">╚═╝  ╚═╝ ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝</text>
+
+  </g>
+
+  <!-- ASCII UNDERLINE -->
+  <line x1="45" y1="255" x2="575" y2="255" stroke="#00b8d4" stroke-width="0.8" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- ==================== LEFT STATUS PANEL ==================== -->
+  <g font-family="monospace" font-size="12">
+
+    <text x="48" y="280" fill="#00d4ff">[●]</text>
+    <text x="70" y="280" fill="#1a3a42">SYSTEM</text>
+    <text x="145" y="280" fill="#4dd0e1">ONLINE</text>
+
+    <text x="48" y="305" fill="#00b8d4">[●]</text>
+    <text x="70" y="305" fill="#1a3a42">MODE</text>
+    <text x="145" y="305" fill="#4dd0e1">DEVELOPMENT</text>
+
+    <text x="48" y="330" fill="#00d4ff">[●]</text>
+    <text x="70" y="330" fill="#1a3a42">STATUS</text>
+    <text x="145" y="330" fill="#4dd0e1">LEARNING</text>
+
+    <text x="48" y="355" fill="#00b8d4">[●]</text>
+    <text x="70" y="355" fill="#1a3a42">FOCUS</text>
+    <text x="145" y="355" fill="#4dd0e1">AI ENGINEERING</text>
+
+  </g>
+
+  <!-- ================================================= -->
+  <!-- RIGHT SYSTEM INFO -->
+  <!-- ================================================= -->
+  <g font-family="monospace" font-size="12">
+
+    <!-- Header -->
+    <text x="625" y="112" fill="#00d4ff" font-weight="bold" font-size="15" filter="url(#glow)">
+      ╔══ ROSHAN YADAV ══╗
+    </text>
+
+    <text x="625" y="134" fill="#0d1f26">
+      ║                   ║
+    </text>
+
+    <!-- Identity -->
+    <text x="625" y="160" fill="#00d4ff">●</text>
+    <text x="640" y="160" fill="#1a3a42">USER</text>
+    <text x="710" y="160" fill="#b2ebf2">Roshan Yadav</text>
+
+    <text x="625" y="182" fill="#00b8d4">●</text>
+    <text x="640" y="182" fill="#1a3a42">ALIAS</text>
+    <text x="710" y="182" fill="#4dd0e1">KYROS</text>
+
+    <text x="625" y="204" fill="#00d4ff">●</text>
+    <text x="640" y="204" fill="#1a3a42">ROLE</text>
+    <text x="710" y="204" fill="#4dd0e1">AI Engineer</text>
+
+    <text x="625" y="226" fill="#00b8d4">●</text>
+    <text x="640" y="226" fill="#1a3a42">FOCUS</text>
+    <text x="710" y="226" fill="#4dd0e1">Intelligent Systems</text>
+
+    <!-- Divider -->
+    <line x1="625" y1="242" x2="900" y2="242" stroke="#0d1f26" stroke-width="0.5"/>
+
+    <!-- Skills -->
+    <text x="625" y="262" fill="#00d4ff">●</text>
+    <text x="640" y="262" fill="#1a3a42">LEARNING</text>
+    <text x="710" y="262" fill="#b2ebf2">ML • DL • LLM • RAG</text>
+
+    <text x="625" y="284" fill="#00b8d4">●</text>
+    <text x="640" y="284" fill="#1a3a42">BUILDING</text>
+    <text x="710" y="284" fill="#b2ebf2">AI Agents &amp; Systems</text>
+
+    <text x="625" y="306" fill="#00d4ff">●</text>
+    <text x="640" y="306" fill="#1a3a42">STACK</text>
+    <text x="710" y="306" fill="#b2ebf2">Python • PyTorch • FastAPI</text>
+
+    <text x="625" y="328" fill="#00b8d4">●</text>
+    <text x="640" y="328" fill="#1a3a42">VECTORS</text>
+    <text x="710" y="328" fill="#b2ebf2">Qdrant • Embeddings</text>
+
+    <text x="625" y="350" fill="#00d4ff">●</text>
+    <text x="640" y="350" fill="#1a3a42">INTERESTS</text>
+    <text x="710" y="350" fill="#b2ebf2">NLP • Agents • GenAI</text>
+
+    <!-- Footer -->
+    <text x="625" y="377" fill="#0d1f26">
+      ╚═══════════════════╝
+    </text>
+
+  </g>
+
+  <!-- ==================== COLOR PALETTE ==================== -->
+  <g transform="translate(625 395)">
+    <rect x="0" y="0" width="35" height="8" rx="1" fill="#00d4ff"/>
+    <rect x="40" y="0" width="35" height="8" rx="1" fill="#00b8d4"/>
+    <rect x="80" y="0" width="35" height="8" rx="1" fill="#0097a7"/>
+    <rect x="120" y="0" width="35" height="8" rx="1" fill="#4dd0e1"/>
+    <rect x="160" y="0" width="35" height="8" rx="1" fill="#80deea"/>
+    <rect x="200" y="0" width="35" height="8" rx="1" fill="#b2ebf2"/>
+  </g>
+
+  <!-- ==================== BOTTOM STATUS BAR ==================== -->
+  <rect x="35" y="395" width="8" height="14" fill="#00d4ff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="48" y="407" font-family="monospace" font-size="10" fill="#1a3a42">
+    system_ready • build_deeply • learn_continuously
+  </text>
+
+  <!-- Right corner -->
+  <text x="965" y="407" text-anchor="end" font-family="monospace" font-size="9" fill="#0d1f26">
+    2026 • AI LAB
+  </text>
+
+  <!-- ==================== ANIMATED ELEMENTS ==================== -->
+  
+  <!-- Corner pulses -->
+  <circle cx="25" cy="25" r="2.5" fill="#00d4ff" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="975" cy="25" r="2.5" fill="#00b8d4" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="25" cy="405" r="2.5" fill="#00d4ff" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <circle cx="975" cy="405" r="2.5" fill="#00b8d4" opacity="0.4">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+
+  <!-- Scanning line -->
+  <rect x="12" y="12" width="976" height="1.5" fill="#00d4ff" opacity="0.08">
+    <animate attributeName="y" values="12;420;12" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.15;0" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+</svg>
