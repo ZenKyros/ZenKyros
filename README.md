@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/ZenKyros/ZenKyros/main/Assets/dasd.svg" width="100%" alt="Kyros banner" />
+</div>
+
 # About Me:
 I'm Roshan (Kyros), an AI Engineer and developer focused on building reliable, practical AI systems that solve real-world problems.
 
