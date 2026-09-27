@@ -5,9 +5,9 @@
 # About Me:
 I'm Roshan (Kyros), an AI Engineer and developer focused on building reliable, practical AI systems that solve real-world problems.
 
-My work centers around Agentic AI, LLMs, intelligent automation, and AI systems, with an emphasis on making AI applications robust, useful, and production-ready.
+My work centers around Agentic AI, LLMs, intelligent automation, and AI systems, with an emphasis on making AI applications  robust, useful, and production-ready.
 
-I enjoy working across the stack, from models and agent workflows to APIs, data, and backend systems. Beyond AI, I'm deeply interested in physics, particularly quantum physics, and the fundamental ideas that shape our understanding of computation, intelligence, and the universe.
+I enjoy working across the stack, from models and agent workflows to APIs, data, and backend systems. Beyond AI, I'm deeply interested in  quantum physics, and the fundamental ideas that shape our understanding of computation, intelligence, and the universe.
 
 
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
